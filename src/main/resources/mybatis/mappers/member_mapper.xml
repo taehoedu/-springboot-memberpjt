@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.office.memberpjt.member.IMemberDao">
+
+	<insert id="insertNewMember"
+			parameterType="com.office.memberpjt.member.MemberDto">
+			
+		INSERT INTO 
+			TBL_MEMBER 
+		VALUES(
+			#{m_id}, 
+			#{m_pw}, 
+			#{m_mail}, 
+			#{m_phone}, 
+			#{m_profile_thum}, 
+			NOW(), 
+			NOW()
+			)
+	
+	</insert>
+	
+	<select id="selectMemberByMId" 
+			parameterType="String"
+			resultType="com.office.memberpjt.member.MemberDto">
+	
+		SELECT 
+			* 
+		FROM 
+			TBL_MEMBER
+		WHERE M_ID = #{m_id}
+	
+	</select>
+	
+	<update id="updateCurrentMember"
+			parameterType="com.office.memberpjt.member.MemberDto">
+	
+		UPDATE 
+			TBL_MEMBER 
+		SET  
+			M_MAIL = #{m_mail}, 
+			M_PHONE = #{m_phone}, 
+			
+			<if test='m_profile_thum != null'>
+				M_PROFILE_THUM = #{m_profile_thum}, 
+ 			</if>
+			
+			M_MOD_DATE = NOW() 
+		WHERE 
+			M_ID = #{m_id}
+	
+	</update>
+	
+	<delete id="deleteCurrentMember"
+			parameterType="com.office.memberpjt.member.MemberDto">
+		
+		DELETE FROM 
+			TBL_MEMBER 
+		WHERE 
+			M_ID = #{m_id}
+				
+	</delete>
+	
+	<update id="deleteProfileThum" parameterType="String">
+		
+		UPDATE 
+			TBL_MEMBER
+		SET 
+			M_PROFILE_THUM = NULL, 
+			M_MOD_DATE = NOW() 
+		WHERE
+		    M_ID = #{m_id}
+		
+	</update>
+	
+</mapper>
