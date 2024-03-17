@@ -43,7 +43,15 @@ public class MemberService {
 		}
 		
 		memberDto.setM_pw(passwordEncoder.encode(memberDto.getM_pw()));
-		int result = iMemberDao.insertNewMember(memberDto);
+		
+		int result = 0;
+		try {
+			result = iMemberDao.insertNewMember(memberDto);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
 		
 		insertNewProfileThum(savedFileName, result, memberDto.getM_id());
 		
