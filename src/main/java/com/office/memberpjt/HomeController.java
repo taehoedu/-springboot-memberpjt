@@ -20,6 +20,7 @@ public class HomeController {
 		// taehoedu task 003
 		// taehoedu task 004
 		// taehoedu task 005
+		// taehoedu task 006
 		
 	}
 	
