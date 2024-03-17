@@ -15,6 +15,7 @@ public class HomeController {
 		
 		return "home";
 		// taehoedu.dev001@gmail.com 작업001
+		// taehoedu@gmail.com 작업002
 	}
 	
 }
