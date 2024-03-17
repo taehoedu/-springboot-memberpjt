@@ -14,7 +14,7 @@ public class HomeController {
 		log.info("home()");
 		
 		return "home";
-		
+		// taehoedu.dev001@gmail.com 작업001
 	}
 	
 }
