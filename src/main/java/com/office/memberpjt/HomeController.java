@@ -16,6 +16,7 @@ public class HomeController {
 		return "home";
 		
 		// taehoedu task 001
+		// taehoedu task 002
 	}
 	
 }
