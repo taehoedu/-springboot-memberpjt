@@ -14,6 +14,8 @@ public class HomeController {
 		log.info("home()");
 		
 		return "home";
+		
+		// taehoedu task 001
 	}
 	
 }
