@@ -14,21 +14,7 @@ public class HomeController {
 		log.info("home()");
 		
 		return "home";
-		
-		// taehoedu task 001
-		// taehoedu task 002
-		// taehoedu task 003
-		// taehoedu task 004
-		// taehoedu task 005
-		// taehoedu task 006
-		// taehoedu task 007
-		// taehoedu task 008
-		// taehoedu task 009
-		// taehoedu task 010
-		// taehoedu task 0066
-		// taehoedu task 011
-		// taehoedu task 012
-		// taehoedu task 013
+
 	}
 	
 }
