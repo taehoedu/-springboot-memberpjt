@@ -162,9 +162,14 @@ public class MemberService {
 		
 		List<ProfileThumDto> profileThumDtos = iProfileThumDao.getProfileThums(m_id);
 		
-		map.put("profileThumDtos", profileThumDtos);
+		if (profileThumDtos.size() > 0) {
+			map.put("profileThumDtos", profileThumDtos);
+			return map;
+			
+		}
 		
-		return map;
+		return null;
+		
 	}
 
 }
