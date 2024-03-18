@@ -18,11 +18,3 @@ public class HomeController {
 	}
 	
 }
-
-
-// task 001
-// task 002
-// task 100
-// task 200
-// task 300
-
