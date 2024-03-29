@@ -116,6 +116,9 @@ public class MemberController {
 	public Object getMember(@RequestParam("sessionID") String sessionID, HttpSession session) {
 		log.info("getMember()");
 		
+		log.info("session ID at front: {}", sessionID);
+		log.info("session ID at back: {}", session.getId());
+		
 		Map<String, Object> responseMap = null;
 		
 		if (sessionID.equals(session.getId())) {
